@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #0a0a0a;
+  color: #fff;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+/* Force app inputs to have dark styling, but keep auth modal fields white */
+body:not(.auth-modal-open) input,
+body:not(.auth-modal-open) textarea,
+body:not(.auth-modal-open) select {
+  color: #fff !important;
+  font-family: inherit;
+  background-color: #1a1a1a !important;
+}
+
+body:not(.auth-modal-open) input::placeholder,
+body:not(.auth-modal-open) textarea::placeholder {
+  color: #888 !important;
+}
+
+body:not(.auth-modal-open) input:focus,
+body:not(.auth-modal-open) textarea:focus,
+body:not(.auth-modal-open) select:focus {
+  color: #fff !important;
+  background-color: #222 !important;
+}
+
+body:not(.auth-modal-open) input:-webkit-autofill,
+body:not(.auth-modal-open) input:-webkit-autofill:hover,
+body:not(.auth-modal-open) input:-webkit-autofill:focus,
+body:not(.auth-modal-open) input:-webkit-autofill:active,
+body:not(.auth-modal-open) textarea:-webkit-autofill,
+body:not(.auth-modal-open) textarea:-webkit-autofill:hover,
+body:not(.auth-modal-open) textarea:-webkit-autofill:focus,
+body:not(.auth-modal-open) textarea:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #1a1a1a inset !important;
+  -webkit-text-fill-color: #fff !important;
+  box-shadow: 0 0 0 1000px #1a1a1a inset !important;
+  caret-color: #fff !important;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CC0000;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #DD1111;
+}
