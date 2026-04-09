@@ -354,9 +354,14 @@
   background: linear-gradient(135deg, #ff5722 0%, #ff4500 100%);
 }
 
+/* Large tablets */
 @media (max-width: 1024px) {
+  .navbar-container {
+    padding: 0 1rem;
+  }
 }
 
+/* Mobile */
 @media (max-width: 768px) {
   .navbar-container {
     padding: 0 0.5rem;
@@ -418,5 +423,22 @@
   .admin-bottom-welcome {
     width: 100%;
     order: 4;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .search-input {
+    width: 70px;
+    font-size: 0.7rem;
+  }
+
+  .logo-text {
+    font-size: 0.75rem;
+  }
+
+  .login-button {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.7rem;
   }
 }
