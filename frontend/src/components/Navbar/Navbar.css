@@ -359,8 +359,55 @@
 
 @media (max-width: 768px) {
   .navbar-container {
-    padding: 0 1rem;
-    gap: 1rem;
+    padding: 0 0.5rem;
+    gap: 0.4rem;
+  }
+
+  .search-input {
+    width: 90px;
+    font-size: 0.75rem;
+  }
+
+  .logo-image {
+    width: 40px;
+    height: 40px;
+  }
+
+  .logo-text {
+    font-size: 0.85rem;
+  }
+
+  .login-button {
+    padding: 0.4rem 0.7rem;
+    font-size: 0.75rem;
+  }
+
+  .login-button span {
+    display: none;
+  }
+
+  .admin-link {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.7rem;
+  }
+
+  .user-menu {
+    gap: 0.3rem;
+  }
+
+  .user-button {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  .user-button svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .user-dropdown-menu {
+    min-width: 160px;
+    right: -10px;
   }
 
   .admin-bottom-bar {
@@ -372,35 +419,4 @@
     width: 100%;
     order: 4;
   }
-  
-  .logo-text {
-    font-size: 1rem;
-  }
-
-  .user-menu {
-    gap: 0.5rem;
-  }
-
-  .admin-link {
-    padding: 0.5rem 0.75rem;
-    font-size: 0.75rem;
-  }
-
-  .login-button {
-    padding: 0.5rem 1rem;
-    font-size: 0.8rem;
-  }
-
-  .user-button {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.8rem;
-  }
-
-  .user-button svg {
-    width: 18px;
-    height: 18px;
-  }
-
-  .user-dropdown-menu {
-    min-width: 180px;  }
 }
