@@ -251,9 +251,17 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="navbar-categories">
+        {/* Hamburger button - only visible on mobile */}
+<button 
+  className="hamburger-btn"
+  onClick={() => setIsMenuOpen(!isMenuOpen)}
+>
+  {isMenuOpen ? '✕' : '☰'}
+</button>
+
+        <div className={`navbar-categories ${isMenuOpen ? 'mobile-open' : ''}`}>
           <div className="navbar-container navbar-categories-container">
-            <Link to="/" className="category-chip home-chip">
+            <Link to="/" className="category-chip home-chip" onClick={() => setIsMenuOpen(false)}>
               Home
             </Link>
             {categories.map((category) => (
@@ -261,6 +269,7 @@ const Navbar = () => {
                 key={category.path}
                 to={category.path}
                 className={`category-chip ${isCategoryActive(category.path) ? 'active' : ''}`}
+                onClick={() => setIsMenuOpen(false)}
               >
                 {category.label}
               </Link>

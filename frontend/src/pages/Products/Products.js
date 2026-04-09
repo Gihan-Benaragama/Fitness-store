@@ -133,7 +133,7 @@ const Products = () => {
               </select>
             </div>
 
-            <div className="filter-section">
+            <div className="filter-section price-range-section">
               <h3 className="filter-title">Price Range</h3>
               <div className="filter-options">
                 <label className="filter-option">
@@ -172,7 +172,7 @@ const Products = () => {
             </div>
 
             {category === 'supplements' && (
-              <div className="filter-section">
+              <div className="filter-section flavour-section">
                 <h3 className="filter-title">Flavour</h3>
                 <div className="filter-options">
                   <label className="filter-option">

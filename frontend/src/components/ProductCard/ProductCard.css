@@ -212,3 +212,34 @@
     font-size: 1.2rem;
   }
 }
+
+@media (max-width: 480px) {
+  .product-info {
+    padding: 0.9rem;
+  }
+
+  .product-name {
+    font-size: 0.9rem;
+    min-height: auto;
+    line-height: 1.35;
+  }
+
+  .product-category {
+    margin-bottom: 0.4rem;
+  }
+
+  .product-rating {
+    margin-bottom: 0.7rem;
+  }
+
+  .product-price {
+    font-size: 1rem;
+  }
+
+  .add-to-cart-btn,
+  .buy-now-btn {
+    padding: 0.7rem 0.8rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+  }
+}
