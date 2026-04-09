@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { orderAPI } from '../../services/api';
 import LoginRegisterModal from '../LoginRegisterModal/LoginRegisterModal';
@@ -19,6 +19,16 @@ const Navbar = () => {
   const userMenuRef = useRef(null);
   const { isAuthenticated, isAdmin, user, logout } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const categories = [
+    { label: 'Supplements', path: '/products/supplements' },
+    { label: 'Accessories', path: '/products/accessories' },
+    { label: 'Shaker Bottles', path: '/products/shaker-bottles' },
+    { label: 'Clothing', path: '/products/clothing' }
+  ];
+
+  const isCategoryActive = (path) => location.pathname === path;
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -238,6 +248,23 @@ const Navbar = () => {
                 {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
               </Link>
             </div>
+          </div>
+        </div>
+
+        <div className="navbar-categories">
+          <div className="navbar-container navbar-categories-container">
+            <Link to="/" className="category-chip home-chip">
+              Home
+            </Link>
+            {categories.map((category) => (
+              <Link
+                key={category.path}
+                to={category.path}
+                className={`category-chip ${isCategoryActive(category.path) ? 'active' : ''}`}
+              >
+                {category.label}
+              </Link>
+            ))}
           </div>
         </div>
 
